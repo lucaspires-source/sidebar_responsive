@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <title>Responsive Sidebar</title>
 </head>
 <body>
@@ -20,11 +21,26 @@
             <a href="#" class="logout-btn">Log out</a>
         </div>
     </header>
+
+    <div class="mobile-nav">
+        <div class="nav-bar">
+            <img src="./assets/images/avatar.jpg" class="mobile-avatar" alt="avatar">
+            <i class="fa fa-bars nav-btn"></i>
+        </div>
+        <div class="mobile-nav-items">
+            <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+            <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+            <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+            <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+            <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+            <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+        </div>
+    </div>
     <div class="sidebar">
-        <center>
+        <div class="profile-info">
             <img src="./assets/images/avatar.jpg" alt="avatar" class="profile-image">
             <h4>Lorem, ipsum.</h4>
-        </center>
+        </div>    
         <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
         <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
         <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
@@ -33,7 +49,22 @@
         <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
     </div>
     <div class="content">
-        
-    </div>
+        <div class="card">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <div class="card">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <div class="card">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.nav_btn').click(function(){
+            $('.mobile_nav_items').toggleClass('active');
+          });
+        });
+        </script>
 </body>
 </html>
